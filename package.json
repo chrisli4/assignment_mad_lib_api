@@ -1,0 +1,21 @@
+{
+  "name": "assignment_mad_lib_api",
+  "version": "1.0.0",
+  "description": "Serving up the madness with a Mad Lib API!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "sequelize db:migrate:undo:all && sequelize db:migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisli4/assignment_mad_lib_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisli4/assignment_mad_lib_api/issues"
+  },
+  "homepage": "https://github.com/chrisli4/assignment_mad_lib_api#readme"
+}
