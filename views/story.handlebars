@@ -1,0 +1,79 @@
+<div class="container">
+
+	<div class="mt-5 mb-3">
+		<label for="story">Your Story</label>
+		<div class="border rounded p-5 text-center">
+				{{#if story }}
+				<span class="align-middle text-center">{{ story }}</span>
+				{{/if}}
+		</div>
+	</div>
+
+	<form action="/story" method="POST">
+		<div class="form-group">
+			<label for="inputStory">Your Story Template</label>
+			<textarea class="form-control" name="user[story]" id="inputStory" rows="5"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="inputWords">Word Bank</label>
+			<input type="text" class="form-control p-2" name="user[words]" id="inputWords" required>
+		</div>
+		<div class="text-center align-middle">
+			<button class="btn btn-outline-warning align-middle" type="submit">Get Story<i class="fa fa-paper-plane-o ml-2"></i></button>
+		</div>
+	</form>
+
+	<div class="row mt-5">
+		<!--Panel-->
+		<div class="col m-2">
+			<div class="text-center mb-4">
+				<a href="{{ adjectivesPath }}" style="text-decoration:none"><button type="button" class="btn btn-block btn-outline-primary">Get Adjectives</button></a>
+			</div>
+			<ul class="list-unstyled text-center align-middle">
+				{{#each input.adjectives as |adjective|}}
+				<li class="word list-group-item">{{ adjective }}</li>
+				{{/each}}
+			</ul>
+		</div>
+		<!--/.Panel-->
+		<div class="w-100 d-md-none"></div>
+		<!--Panel-->
+		<div class="col m-2">
+			<div class="text-center mb-4">
+				<a href="{{ nounsPath }}" style="text-decoration:none"><button type="button" class="btn btn-block btn-outline-primary">Get Nouns</button></a>
+			</div>
+			<ul class="list-unstyled text-center align-middle">
+				{{#each input.nouns as |noun|}}
+				<li class="word list-group-item">{{ noun }}</li>
+				{{/each}}
+			</ul>
+		</div>
+		<!--/.Panel-->
+		<div class="w-100 d-md-none"></div>
+		<!--Panel-->
+		<div class="col m-2">
+			<div class="text-center mb-4">
+				<a href="{{ verbsPath }}" style="text-decoration:none"><button type="button" class="btn btn-block btn-outline-primary">Get Verbs</button></a>
+			</div>
+			<ul class="list-unstyled text-center align-middle">
+				{{#each input.verbs as |verb|}}
+				<li class="word list-group-item">{{ verb }}</li>
+				{{/each}}
+			</ul>
+		</div>
+		<!--/.Panel-->
+		<div class="w-100 d-md-none"></div>
+		<!--Panel-->
+		<div class="col m-2">
+			<div class="text-center mb-4">
+				<a href="{{ adverbsPath }}" style="text-decoration:none"><button type="button" class="btn btn-block btn-outline-primary">Get Adverbs</button></a>
+			</div>
+			<ul class="list-unstyled text-center align-middle">
+				{{#each input.adverbs as |adverb|}}
+				<li class="word list-group-item">{{ adverb }}</li>
+				{{/each}}
+			</ul>
+		</div>
+		<!--/.Panel-->    
+	</div>
+</div>

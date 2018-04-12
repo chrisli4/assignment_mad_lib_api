@@ -1,0 +1,27 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+    <!-- Navbar brand -->
+     <a class="navbar-brand" href="/">Mad Libs</a>
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navmenu">
+	
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	        {{#if user }}
+	          <li class="nav-item"><a class="nav-link" href="{{ madlibsPath }}">Play Mad Libs</a></li>
+	          <li class="nav-item"><a class="nav-link" href="{{ logoutPath }}">Logout</a></li>
+	        {{else }}
+	          <li class="nav-item"><a class="nav-link" href="{{ loginPath }}">Login</a></li>
+	          <li class="nav-item"><a class="nav-link" href="{{ newUserPath }}">Register</a></li>
+	        {{/if }}
+		</ul>
+    </div>
+    <!-- Collapsible content -->
+</nav>
+<!--/.Navbar-->

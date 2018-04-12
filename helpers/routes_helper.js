@@ -7,6 +7,6 @@ const loggedOutOnly = (req, res, next) => {
 }
 
 module.exports = {
-	loggedOutOnly,
-	loggedInOnly
+	loggedInOnly,
+	loggedOutOnly
 }

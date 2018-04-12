@@ -1,12 +1,33 @@
-<table class="table">
-	<tbody>
-		<tr>
-			<th scope="row">email</th>
-			<td>{{user.email}}</td>
-		</tr>
-		<tr>
-			<th scope="row">API key</th>
-			<td>{{user.token}}</td>
-		</tr>
-	</tbody>
-</table>
+<!--Table-->
+<div class="container mt-5">
+
+	<div class="card mx-auto" style="max-width:500px;">
+		<div class="card-body">
+			<table class="table mx-auto" >
+			    <!--Table body-->
+			    <tbody>
+			    	<h4 class="text-center mt-1 mb-4">Your Profile</h4>
+			  
+			        <tr>
+			            <th scope="row">Email</th>
+			            <td>{{user.email}}</td>
+			        </tr>
+			        <tr>
+			            <th scope="row">First Name</th>
+			            <td>{{user.fname}}</td>
+			        </tr>
+			        <tr>
+			            <th scope="row">Last Name</th>
+			            <td>{{user.lname}}</td>
+			        </tr>
+			        <tr>
+			            <th scope="row">API Key</th>
+			            <td>{{user.token}}</td>
+			        </tr>
+			    </tbody>
+			    <!--Table body-->
+			</table>
+		</div>
+	</div>
+</div>
+<!--Table-->

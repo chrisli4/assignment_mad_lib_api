@@ -7,8 +7,6 @@ module.exports = function(passport) {
 
 	passport.use(new BearerStrategy((token, done) => {
 
-		console.log(token);
-
 		User.findOne({
 			where: { token: token }
 		})

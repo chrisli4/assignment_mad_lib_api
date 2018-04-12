@@ -1,22 +1,26 @@
-<div class="container">
-	{{#if messages}}
-		{{#each messages as |message|}}
-		<div>{{message}}</div>
-		{{/each}}
-	{{/if}}
-	<form action="/sessions" method="POST">
-		<h2>Log In</h2>
+<!-- Default form register -->
+<div class="container p-3 mt-3">
+	<form class="mx-auto" action="{{ loginPath }}" method="POST" style="max-width:450px">
+		<h2 class="text-center">Sign In</h2>
 		<div class="form-group">
-			<label for="email">Email address</label>
-			<input type="email" class="form-control" name="user[email]" id="user[email]" placeholder="Enter email">
+			<!-- Default input email -->
+			<label for="email">Your email</label>
+			<input type="email" class="form-control" name="user[email]" id="user[email]" required>
 			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 		</div>
+
+		<!-- Default input password -->
 		<div class="form-group">
 			<label for="password">Password</label>
-			<input type="password" class="form-control" name="user[password]" id="user[password]" placeholder="Password">
+			<input type="password" class="form-control" name="user[password]" id="user[password]" required>
 		</div>
-		<button type="submit" class="btn btn-primary">Submit</button>
+
+		<div class="text-center mt-4 mb-2">
+			<button class="btn btn-primary" type="submit">Login</button>
+		</div>
+		<div class="text-center">
+			<small id="signHelp" class="form-text">Don't have an account? <a href="{{ newUserPath }}">Sign Up</a></small>
+		</div>
 	</form>
 </div>
-
-<a href="/users/new">Sign Up</a>
+<!-- Default form register -->
